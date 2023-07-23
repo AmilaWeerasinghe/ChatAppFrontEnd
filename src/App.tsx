@@ -1,29 +1,24 @@
+// App.tsx
+
 import React from 'react';
+import './App.css';
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
 import UserProfile from './components/UserProfile';
+import PasswordReset from './components/PasswordReset';
 import ChatInterface from './components/ChatInterface';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div>
-      {/* Display the RegistrationForm */}
-      <h2>Registration</h2>
+    <div className="App">
+      {/* You can use the components here */}
       <RegistrationForm />
-
-      {/* Display the LoginForm */}
-      <h2>Login</h2>
       <LoginForm />
-
-      {/* Display the UserProfile */}
-      <h2>User Profile</h2>
-      <UserProfile />
-
-      {/* Display the ChatInterface */}
-      <h2>Chat Interface</h2>
+      <UserProfile userId="USER_ID_HERE" />
+      <PasswordReset />
       <ChatInterface />
     </div>
   );
-};
+}
 
 export default App;
