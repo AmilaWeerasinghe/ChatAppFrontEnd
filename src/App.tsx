@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import RegistrationForm from './components/RegistrationForm';
+import LoginForm from './components/LoginForm';
+import UserProfile from './components/UserProfile';
+import ChatInterface from './components/ChatInterface';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Display the RegistrationForm */}
+      <h2>Registration</h2>
+      <RegistrationForm />
+
+      {/* Display the LoginForm */}
+      <h2>Login</h2>
+      <LoginForm />
+
+      {/* Display the UserProfile */}
+      <h2>User Profile</h2>
+      <UserProfile />
+
+      {/* Display the ChatInterface */}
+      <h2>Chat Interface</h2>
+      <ChatInterface />
     </div>
   );
-}
+};
 
 export default App;
